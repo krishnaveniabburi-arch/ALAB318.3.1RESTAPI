@@ -1,8 +1,9 @@
 import express from 'express'
 const router = express.Router()
 
-import users from '../data/users.js'
-import error from '../utilities/error.js'
+import users from "../data/users.js";
+import error from "../utilities/error.js";
+import posts from "../data/posts.js";
 
 router
   .route("/")
