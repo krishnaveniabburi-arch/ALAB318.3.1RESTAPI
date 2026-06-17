@@ -12,10 +12,9 @@ router
       href: "posts/:id",
       rel: ":id",
       type: "GET",
-    },
-      ;
-
-    res.json({ posts, links });
+    };
+      
+      res.json({ posts, links });
   })
   .post((req, res, next) => {
     if (req.body.userId && req.body.title && req.body.content) {
@@ -28,7 +27,9 @@ router
 
       posts.push(post);
       res.json(posts[posts.length - 1]);
-    } else next(error(400, "Insufficient Data"));
+    } else {
+       next(error(400, "Insufficient Data"));
+    }
   });
 
 router
